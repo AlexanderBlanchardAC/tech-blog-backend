@@ -147,7 +147,7 @@ app.get('/post', async (req, res) => {
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB')
-    app.listen(process.env.PORT || PORT, () => console.log(`Server running on port ${PORT}`))
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
 })
 
 
