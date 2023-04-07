@@ -11,7 +11,7 @@ const multer = require('multer');
 const uploadMiddleware = multer({ dest: 'uploads/' });
 const fs = require('fs');
 require('dotenv').config();
-const PORT = process.env.PORT || 4500
+const PORT = process.env.PORT || 4500;
 
 console.log(process.env.NODE_ENV)
 mongoose.connect('mongodb+srv://alexanderblanchardac:techblog123@cluster0.tw62k2s.mongodb.net/?retryWrites=true&w=majority')
@@ -20,7 +20,7 @@ var salt = bcrypt.genSaltSync(10);
 const secret = 'asdghtredvbjmkkhyrr5689hggbnhgfd7';
 
 
-app.use(cors({credentials:true, origin:'http://localhost:3002'}));
+app.use(cors({credentials:true, origin:'https://techblog-0wpd.onrender.com/'}));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
