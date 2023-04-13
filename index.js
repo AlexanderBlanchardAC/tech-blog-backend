@@ -1,5 +1,5 @@
 const express = require('express');
-// const cors = require('cors');
+const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const User = require('./models/User');
@@ -21,7 +21,12 @@ const secret = 'asdghtredvbjmkkhyrr5689hggbnhgfd7';
 
 
 
-// app.use(cors({credentials:true, origin:'https://techblog-0wpd.onrender.com' }));
+app.use(cors({
+    origin:'https://techblog-0wpd.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    credentials: true,
+    })
+);
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
