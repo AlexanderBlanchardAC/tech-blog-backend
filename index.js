@@ -21,7 +21,7 @@ const secret = 'asdghtredvbjmkkhyrr5689hggbnhgfd7';
 
 
 
-app.use(cors({credentials:true, origin:'https://techblog-0wpd.onrender.com'}));
+// app.use(cors({credentials:true, origin:'https://techblog-0wpd.onrender.com' }));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
