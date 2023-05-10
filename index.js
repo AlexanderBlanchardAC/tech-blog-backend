@@ -1,5 +1,5 @@
 const express = require('express');
-//const cors = require('cors');
+const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 const User = require('./models/User');
@@ -21,12 +21,7 @@ const secret = 'asdghtredvbjmkkhyrr5689hggbnhgfd7';
 
 
 
-// app.use(cors({
-//     origin:'https://abcreatedtechieblog.netlify.app/',
-//     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-//     credentials: true,
-//     })
-// );
+app.use(cors()
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
