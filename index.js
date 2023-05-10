@@ -22,7 +22,7 @@ const secret = 'asdghtredvbjmkkhyrr5689hggbnhgfd7';
 
 
 app.use(cors({
-    origin:'https://techblog-api-0wpd.onrender.com',
+    origin:'https://techblog-api-m083.onrender.com',
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
     credentials: true,
     })
